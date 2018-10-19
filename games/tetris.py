@@ -1,5 +1,8 @@
-import random
 import pew
+try:
+    import random
+except ImportError:
+    import urandom as random
 
 
 BRICKS = [

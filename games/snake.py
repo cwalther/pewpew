@@ -1,5 +1,8 @@
 import pew
-import random
+try:
+    import random
+except ImportError:
+    import urandom as random
 
 
 pew.init()

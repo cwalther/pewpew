@@ -31,9 +31,9 @@ def hold_keys():
         keys = 0
     if keys:
         hold = 0
-    while pew.keys() and time.monotonic() - hold < 0.25:
+    while pew.keys() and time.ticks_diff(time.ticks_ms(), hold) < 250:
         return 0
-    hold = time.monotonic()
+    hold = time.ticks_ms()
     return keys
 
 
